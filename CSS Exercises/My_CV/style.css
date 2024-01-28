@@ -1,0 +1,9 @@
+.containerbasic{
+width: 40vw;
+height: 50vh;
+border: 5px solid black;
+display: flex;
+}
+.top{
+flex-direction: row;
+}

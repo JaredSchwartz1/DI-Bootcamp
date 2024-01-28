@@ -1,0 +1,71 @@
+.container {
+    width: 80vw;
+    height: 80vh;
+    border: solid 5px black;
+    margin: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.element {
+    width: 100px;
+    height: 100px;
+    border: solid 2px red;
+    margin: 20px;
+
+}
+
+.chunkboi {
+    width: 200px;
+    height: 300px;
+    margin: 50px;
+}
+
+.longboi {
+    width: 78vw;
+}
+.wideboi{
+width: 400px;
+}
+.squeeze{
+margin: 0px;
+}
+.tiny{
+width: 10vw;
+}
+.big{
+width: 40vw;
+}
+
+.container2 {
+    width: 80vw;
+    height: 80vh;
+    border: solid 5px black;
+    margin: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+
+.container3 {
+    width: 80vw;
+    height: 80vh;
+    border: solid 5px black;
+    margin: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container4{
+    width: 80vw;
+    height: 80vh;
+    border: solid 5px black;
+    margin: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
