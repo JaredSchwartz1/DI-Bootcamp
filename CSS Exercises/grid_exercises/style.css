@@ -43,6 +43,72 @@
     ;
 
 }
-.header{
 
+.header {
+    background-color: aqua;
+}
+
+.hero {
+    background-color: magenta;
+}
+
+.main_content {
+    background-color: lightyellow;
+}
+
+.sidebar {
+    background-color: lightgreen;
+}
+.extra_content {
+    background-color: grey;
+}
+.related_images {
+    background-color: aquamarine;
+}
+.related_posts {
+    background-color: pink;
+}
+.footer{
+    background-color: orange;
+}
+
+.container3 {
+    width: 80vw;
+    height: 80vh;
+    display: grid;
+    border: 6px solid black;
+    grid-gap: 10px;
+    grid-template-columns: repeat(3 1fr);
+    grid-template-rows: repeat(5 1fr);
+    grid-template-areas:
+        "o o o"
+        "t th f"
+        "t fi fi"
+        "s s se"
+        "e e e"  
+    ;
+}
+.one{
+background-color: rgb(179, 9, 102);
+}
+.two{
+    background-color: rgb(59, 59, 146);
+}
+.three{
+    background-color: rgb(92, 92, 216);
+}
+.four{
+    background-color: lightskyblue;
+}
+.five{
+    background-color: magenta;
+}
+.six{
+    background-color: rgb(179, 9, 102);
+}
+.seven{
+    background-color: rgb(59, 59, 146);
+}
+.eight{
+    background-color: rgb(92, 92, 216);
 }
