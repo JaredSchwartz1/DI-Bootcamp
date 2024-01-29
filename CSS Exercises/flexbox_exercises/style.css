@@ -69,3 +69,18 @@ width: 40vw;
     flex-direction: row;
     justify-content: center;
 }
+.container4butwithflexbox{
+    width: 80vw;
+    height: 80vh;
+    border: solid 5px black;
+    margin: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.element1{
+flex: 1;
+}
+.element2,.element3{
+flex:5;
+}
