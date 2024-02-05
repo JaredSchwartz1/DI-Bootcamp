@@ -6,13 +6,22 @@ console.log('I eat ' + favFood + ' for every ' + favMeal + '.')*/
 
 //ex 2
 
-/*const myWatchedSeries = ["black mirror", "money heist", "the big bang theory"];
+/*
+const myWatchedSeries = ["black mirror", "money heist", "the big bang theory"];
 let myWatchedSeriesLength=myWatchedSeries.length
 let firstSeries =myWatchedSeries.splice(0,2,"black mirror", "money heist");
 let lastSeries = myWatchedSeries.splice(2,1);
 console.log(myWatchedSeriesLength)
 let myWatchedSeriesSentence= firstSeries.join(", ") + ', and ' + lastSeries.toString()
-console.log('I watched 3 series : '+myWatchedSeriesSentence)*/
+console.log('I watched' +myWatchedSeriesLength +'series : '+myWatchedSeriesSentence)
+
+myWatchedSeries[2]="Friends"
+myWatchedSeries.push("Percy Jackson")
+myWatchedSeries.unshift("Futurama")
+myWatchedSeries.splice(1,1)
+console.log(myWatchedSeries[1][2])
+console.log(myWatchedSeries)
+*/
 
 //ex 3
 
