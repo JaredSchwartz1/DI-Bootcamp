@@ -9,11 +9,11 @@ If the word “bad” comes after the word “not”, you should replace the who
 For example, the result here should be : “The movie is good, I like it”
 If the word “bad” does not come after “not” or the words are not in the sentence, console.log the original sentence.*/
 
-/*
+
 //let sentence = "The Kiryat Moriah food was not that bad."//here are a few sample sentences including some that would be problematic for certain codes
 //let sentence="No, the green flavor is bad, not good!"
 //let sentence="Not bad for a rookie."
-//let sentence= "I feel really bad for him"
+let sentence= "I feel really bad for him"
 //let sentence ="Every knot I tie is bad."
 //let sentence = "I never noticed how bad it was."
 let wordNot = sentence.indexOf("not");
@@ -33,4 +33,4 @@ if (wordNot < wordBad && wordNot>=0 && sentence.charAt(wordNot-1)==" " && senten
 else {
     console.log(sentence)
 }
-*/
+
