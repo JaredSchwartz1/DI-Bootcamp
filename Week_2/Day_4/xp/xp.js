@@ -12,7 +12,8 @@
 // infoAboutPerson("David", 45, "blue")
 // infoAboutPerson("Josh", 12, "yellow")
 
-//part 1
+//part I
+
 // function infoAboutMe(){
 // let myName='Jared'
 // let myAge='19'
@@ -22,7 +23,9 @@
 // console.log(sentence)
 // }
 // infoAboutMe()
-// //part 2
+
+// //part II
+
 // function infoAboutPerson(personName, personAge, personFavoriteColor){
 // let sentence=`Your name is ${personName}, you are ${personAge} years old, and your favorite color is ${personFavoriteColor}.`
 // console.log(sentence)
@@ -83,13 +86,19 @@
 // }
 // calculateTip()
 
-//ex_3 
+//ex_3 Create a function call isDivisible() that takes no parameter.
 
-// function isDivisible(){
+// In the function, loop through numbers 0 to 500.
+
+// Console.log all the numbers divisible by 23.
+
+// At the end, console.log the sum of all numbers that are divisible by 23.
+
+// function isDivisible(Num){
 // let multiples=[];
 // let sum;
 // for(i=0;i<=500;i++){
-// if(i%23===0){
+// if(i%Num===0){
 //     multiples.push(i)
 // }
 // else{
@@ -109,4 +118,4 @@
 
 // }
 
-// isDivisible()
+// isDivisible(23)
