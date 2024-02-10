@@ -16,8 +16,8 @@ function wordFrame() {
     let wordSetArray = [];
     let candidate;
 
-    while(wordSet==null||""){
-    prompt('Provide a sentence of words separated by commas and then a space')
+    while (wordSet == null || "") {
+        prompt('Provide a sentence of words separated by commas and then a space')
     }
 
     function enterIntoArray() {
@@ -38,19 +38,15 @@ function wordFrame() {
     }
     function findBiggestWord(Arr) {
         candidate = Arr[0];
-        for (i = (Arr.indexOf(candidate)); i < Arr.length-1; i++) {
+        for (i = (Arr.indexOf(candidate) + 1); i <= Arr.length - 1; i++) {
             if (candidate.length >= Arr[i].length) {
                 continue;
             }
             else {
-                candidate = Arr[i]
-
+                candidate = Arr[(i)]
             }
-           console.log(candidate.length)
-            return candidate.length
-
         }
-
+        return candidate.length
 
     }
     function frameCreate(Num, Arr) {
@@ -58,7 +54,7 @@ function wordFrame() {
             let row1 = []
             for (let i = 1; i <= (Num + 4); i++) {
                 row1.unshift('*')
-               
+
             }
             console.log(row1.join(''))
 
@@ -66,13 +62,13 @@ function wordFrame() {
         topAndBottom()
         for (let i = 0; i < Arr.length; i++) {
             let text;
-        function spaceGenerator() {
-            let spaces = [];
-            for (let j = Arr[i].length; j < Num; j++) {
-                spaces.push(" ")
+            function spaceGenerator() {
+                let spaces = [];
+                for (let j = Arr[i].length; j < Num; j++) {
+                    spaces.push(" ")
+                }
+                return text = spaces.join('')
             }
-            return text=spaces.join('')
-        }
             console.log(`* ${Arr[i]}${spaceGenerator()} *`)
         }
         topAndBottom()
