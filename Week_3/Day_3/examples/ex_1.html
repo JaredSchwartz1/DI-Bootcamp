@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+let elapse=0;
+        // let timeOutID = setTimeout(sale, 5000);
+        // function sale() {
+        //     alert('The sale is ending in 10 mintutes');
+        // }
+        let timeOutID2 = setTimeout(Sale, 5000);
+function quickSale(){
+    elapse+=2;
+    alert(`The sale is ending in ${10-elapse} seconds`)
+ 
+}
+function Sale(){
+    alert(`The sale is ending in ${10-elapse} seconds`)
+    let interval=setInterval(quickSale,2000)
+    if (elapse==10){
+    stopInterval()
+}
+function stopInterval(){
+    clearInterval(interval)
+}
+
+}
+
+
+
+
+    </script>
+</body>
+
+</html>

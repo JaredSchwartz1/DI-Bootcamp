@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.draggable{
+height: 100px;
+width: 100px;
+background-color: blue;
+border: 3px solid black;
+}
+.droppable{
+    height: 300px;
+width: 300px;
+background-color: red;
+border: 3px solid black;
+}
+    </style>
+</head>
+<body>
+    <div id="draggable" class="draggable" draggable="true" ondragstart="drag(event)"></div>
+    <div id="droppable" class="droppable" ondragover="allowDrop(event)" ondrop="drop(event)"></div>
+
+
+    <script>
+function drag(ev){
+    ev.dataTransfer.setData('text',ev.target.id)
+}
+function allowDrop(ev){
+    ev.preventDefault()
+}
+
+function onDrop(ev){
+
+let data = ev.dataTransfer.getData('text')
+let draggedElement=document.getElementById(data)
+ev.target.appendChild(draggedElement)
+}
+    </script>
+</body>
+</html>

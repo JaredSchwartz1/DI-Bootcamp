@@ -9,6 +9,13 @@
 // Finally, append this updated list node to the unordered list (<ul>), using the appendChild method.
 
 // Use the firstElementChild and the lastElementChild properties to retrieve the first and last <li> elements from their parent element (<ul>). Display the text of each link. (Hint: use the textContent property).
-
 let div=document.body.firstElementChild
+div.setAttribute('id','socialNetworkNavigation')
+let ul=div.firstElementChild
+let newLi=document.createElement('li')
+let content=document.createTextNode('Logout')
+newLi.appendChild(content)
+ul.appendChild(newLi)
 
+console.log(ul.firstElementChild.textContent)
+console.log(ul.lastElementChild.textContent)
