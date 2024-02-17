@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html>
- <head>
-  <meta charset="utf-8" />
-  <title>Challenge: Mad Libs</title>
- </head>
- <body>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Challenge: Mad Libs</title>
+    <style>
+.shuffler{
+   display: none;
+}
+    
+    </style>
+</head>
+
+
+<body>
 
     <h1>Mad Libs</h1>
 
@@ -16,12 +25,13 @@
         <label for="place">A place:</label><input type="text" id="place"><br>
         <button id="lib-button">Lib it!</button>
     </form>
-
-    <p>Generated story: 
-    <span id="story"></span>
+    <button id="shuffle-button" style="display: none;">Shuffle</button>
+    <p id="paragraph">Generated story:
+        <span id="story"></span>
     </p>
 
-    <script src="..."></script>
+    <script src="DC.js"></script>
 
- </body>
+</body>
+
 </html>
