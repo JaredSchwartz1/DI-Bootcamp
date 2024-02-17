@@ -2,7 +2,6 @@ let form = document.getElementById('libform');
 let story = document.getElementById('story');
 let shuffler = document.getElementById('shuffle-button');
 let para = document.getElementById('paragraph');
-let e=event;
 const myDayStory = {
     title: 'My Day',
     text: `I woke up in my ${noun} and got dressed for the day. I ate pancakes for breakfast and they were ${adjective}. I said hello to the ${person} as he opened the door for me and then I was on my way to Ramat Gan. I needed to ${verb} quickly to make it to ${place}. Luckily I made it there just in time.`,
@@ -35,8 +34,8 @@ let libTitle = document.createTextNode(`${selectedStory.title}`)
 let libStory = document.createTextNode(`${selectedStory.text}`)
 let returnArray = [selectedStory, libTitle, titleElement, libStory]
 
-function libCreate(e, selectedStory) {
-    e.preventDefault()
+function libCreate(event, selectedStory) {
+    event.preventDefault()
     let verb = document.getElementById('verb').value
     let place = document.getElementById('place').value
     let person = document.getElementById('person').value
@@ -57,6 +56,7 @@ function libCreate(e, selectedStory) {
             selectedStory = stories[Math.floor(Math.random() * 5)];
             shuffler.removeAttribute('style')
         }
+        console.log(selectedStory)
         titleElement = document.createElement('h2')
         libTitle = document.createTextNode(`${selectedStory.title}`)
         titleElement.appendChild(libTitle)
@@ -65,7 +65,7 @@ function libCreate(e, selectedStory) {
         story.appendChild(libStory)
         selectedStory.shown = true
         console.log(selectedStory)
-         returnArray = [selectedStory, libTitle, titleElement, libStory]
+        returnArray = [selectedStory, libTitle, titleElement, libStory]
         return returnArray
     }
 }
@@ -87,6 +87,10 @@ function shuffle(returnArray) {
             i.shown = false
         }
         alert('All stories have been used. You can change your answers if you\'d like.')
+        shuffler.setAttribute('style',"display: none;")
+        libTitle.remove()
+        titleElement.remove()
+        libStory.remove()
     }
     else {
         while (selectedStory.shown == true) {
@@ -96,7 +100,7 @@ function shuffle(returnArray) {
         libTitle.remove()
         titleElement.remove()
         libStory.remove()
-      libCreate(e,selectedStory)
+        libCreate(event, selectedStory)
     }
 }
 form.addEventListener('submit', libCreate)
