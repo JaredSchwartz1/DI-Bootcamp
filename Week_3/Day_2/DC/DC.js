@@ -2,6 +2,7 @@ let form = document.getElementById('libform');
 let story = document.getElementById('story');
 let shuffler = document.getElementById('shuffle-button');
 let para = document.getElementById('paragraph');
+let formButton=document.getElementById('lib-button')
 const myDayStory = {
     title: 'My Day',
     text: `I woke up in my ${noun} and got dressed for the day. I ate pancakes for breakfast and they were ${adjective}. I said hello to the ${person} as he opened the door for me and then I was on my way to Ramat Gan. I needed to ${verb} quickly to make it to ${place}. Luckily I made it there just in time.`,
@@ -66,6 +67,7 @@ function libCreate(event, selectedStory) {
         selectedStory.shown = true
         console.log(selectedStory)
         returnArray = [selectedStory, libTitle, titleElement, libStory]
+        formButton.setAttribute('style',"display: none;")
         return returnArray
     }
 }
@@ -91,6 +93,7 @@ function shuffle(returnArray) {
         libTitle.remove()
         titleElement.remove()
         libStory.remove()
+        formButton.removeAttribute('style')
     }
     else {
         while (selectedStory.shown == true) {
@@ -100,10 +103,11 @@ function shuffle(returnArray) {
         libTitle.remove()
         titleElement.remove()
         libStory.remove()
-        libCreate(event, selectedStory)
-    }
+       libCreate(event, selectedStory)
+        }
+   
 }
 form.addEventListener('submit', libCreate)
-shuffler.addEventListener('click', function () { shuffle(returnArray) })
+shuffler.addEventListener('click', function () { shuffle(returnArray)})
 
 
