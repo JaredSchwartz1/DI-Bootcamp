@@ -53,13 +53,18 @@ function cursorColoring() {
         document.querySelector('.selectedColor').addEventListener('mouseover', highlight)
         document.querySelector('.selectedColor').classList.remove('selectedColor')
         this.classList.add('selectedColor')
+        
     }
     else {
         this.classList.add('selectedColor')
     }
     this.setAttribute("style", `background-color: ${this.getAttribute('id')};`)
     this.removeEventListener('mouseover', highlight)
-    // document.querySelector('*').addEventListener('mousedown', (ev) => { brushPaint(ev) })
+    // section.addEventListener('mousedown', (ev) => { brushPaint(ev) })
+    let everything=document.querySelectorAll('*')
+        for (i of everything){
+            i.addEventListener('mousedown', (ev) => { brushPaint(ev) })
+            }
     cursorColor = this.getAttribute('id')
     return cursorColor
 }
@@ -83,23 +88,28 @@ function resetAll() {
         document.querySelector('.selectedColor').classList.remove('selectedColor')
     }
     cursorColor = null
+    for (i of everything){
+        i.removeEventListener('mousedown', (ev) => { brushPaint(ev) })
+        }
 }
 function paintPaper(ev) {
     ev.currentTarget.setAttribute('style', `background-color: ${cursorColor};`)
 }
 function brushPaint(ev) {
-    
-    ev.currentTarget.addEventListener('mouseover', (ev) => {
-        while(ev.button==0){
-       ev.relatedTarget.setAttribute('style', `background-color: ${cursorColor};`)
-        }
+    console.log(1)
+    for(i of paperTilesArray){
+    i.addEventListener('mouseover', (ev) => {
+        console.log(ev.button==0)
+       while(ev.button==0){
+       ev.currentTarget.setAttribute('style', `background-color: ${cursorColor};`)
+       }
     })
-    ev.currentTarget.addEventListener('mouseup', (ev) => {
-        ev.currentTarget.removeEventListener('mouseover',(ev) => {
-            console.log(ev.button)
-            while(ev.button==0){
-           ev.relatedTarget.setAttribute('style', `background-color: ${cursorColor};`)
-            }
-        })
+    i.addEventListener('mouseup', (ev) => {
+        i.removeEventListener('mouseover', (ev) => {
+       
+            ev.currentTarget.setAttribute('style', `background-color: ${cursorColor};`)
+             
+         })
      })
+    }
 }
