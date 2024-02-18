@@ -1,50 +1,58 @@
-.background{
-    width: 90vw;
+.background {
+    width: 95vw;
     height: 90vh;
     background-color: grey;
     display: flex;
-    
+
 }
-section{
+
+section {
     width: 75vw;
     height: 80vh;
-   background-color: lightgrey; 
-   display: grid;
-   
-   grid-template-columns: repeat(60, 1fr);
-   grid-template-rows: repeat(24,1fr);
-   gap: 5px;
-   row-gap: 5px;
-   padding: 10px;
+    background-color: lightgrey;
+    display: grid;
+
+    grid-template-columns: repeat(60, 1fr);
+    grid-template-rows: repeat(24, 1fr);
+    gap: 5px;
+    row-gap: 5px;
+    padding: 10px;
 }
-aside{
+
+aside {
     width: 20vw;
     height: 80vh;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(8,1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(8, 1fr);
     gap: 10px;
-    
+    padding: 10px;
+
 
 }
-.paperGrid{
-    width: 18px; 
+
+.paperGrid {
+    width: 18px;
     height: 24px;
     background-color: white;
 }
-.clearDiv{
+
+.clearDiv {
     grid-column: span 3;
     border: 3px solid black;
 }
-.color{
-width: 75px;
-height: 100px;
-border: 3px solid black;
-} 
-.clear{
+
+.color {
+    width: 75px;
+    height: 100px;
+    border: 3px solid black;
+}
+
+.clear {
     width: auto;
     height: auto;
 }
 
-
-
+.selectedColor {
+    border: 3px solid gold
+}
